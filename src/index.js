@@ -66,52 +66,17 @@ function createMarkup({
             `;
 }
 
-// function onLoadMore(){
-
-//       loadMore.disable();
-
-//       return imgApi.AxioSearch()
-//       .then((data => {
-
-//         chekingTotalHits(imgApi.countImg,data.totalHits)
-//         return data;
-
-//     }))
-
-//       .then(({hits}) => {
-
-//         imgApi.countImg += hits.length;
-
-//         return hits.reduce(
-//             (markup, hits) => createMarkup(hits) + markup, ""
-//         );
-
-//         }).then((markup) =>
-//         {
-//         updateGalleryCards(markup);
-
-//         loadMore.enable();
-
-//         })
-
-//         .catch(error => Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again!"));
-
-//     };
-
-// Update markup
 
 function updateGalleryCards(markup) {
   galletyList.insertAdjacentHTML('beforeend', markup);
   gallery.refresh();
 }
 
-//     //   Cleaner
 
 function cleanerMarkup(element) {
   return (element.innerHTML = '');
 }
 
-// Controle
 
 function chekingTotalHits(countImg, totalHits) {
   if (countImg === totalHits) {
