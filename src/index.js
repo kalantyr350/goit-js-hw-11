@@ -1,5 +1,5 @@
 import ImgApi from './js/axio';
-import LoadMoreBtn from './js/LoadMoreBtn.js';
+import LoadMoreBtn from './js/loadMoreBtn.js';
 import Notiflix from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
@@ -66,17 +66,14 @@ function createMarkup({
             `;
 }
 
-
 function updateGalleryCards(markup) {
   galletyList.insertAdjacentHTML('beforeend', markup);
   gallery.refresh();
 }
 
-
 function cleanerMarkup(element) {
   return (element.innerHTML = '');
 }
-
 
 function chekingTotalHits(countImg, totalHits) {
   if (countImg === totalHits) {
